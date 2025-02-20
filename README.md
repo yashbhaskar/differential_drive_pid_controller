@@ -105,9 +105,7 @@ pip install requests dash plotly numpy matplotlib
 ## 🚀 Usage
 
 ### Launch the System
-```bash
-ros2 launch differential_drive_pid pid_controller.launch.py
-```
+
 - **launch gazebo**
   ```bash
   ros2 launch differential_drive_controller gazebo.launch.py 
