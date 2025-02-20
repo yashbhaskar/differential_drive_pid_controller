@@ -127,6 +127,7 @@ pip install requests dash plotly numpy matplotlib
   ros2 run differential_drive_controller rpm_visualizer.py
   ```
 
+https://github.com/user-attachments/assets/9bd60d71-c6df-4fe0-9f24-844d6443ed8c
 
 ---
 
@@ -150,6 +151,8 @@ Run the following command to see the real-time RPM plot:
 - `pid_controller` subscribes to `/odom` (from `nav_msgs::Odometry`) to implement feedback control.
 - The PID controller adjusts linear and angular velocity to follow the desired path.
 - `waypoint_navigator` sends velocity commands to `/cmd_vel` for sequential waypoint navigation.
+
+---
 
 ## 👨‍💻 Contributing
 Pull requests are welcome! 🎉 If you have ideas for improvements, feel free to fork and submit PRs.
