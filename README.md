@@ -134,6 +134,7 @@ ros2 launch differential_drive_pid pid_controller.launch.py
 
 ## 📊 Visualization
 Run the following command to see the real-time RPM plot:
+![Screenshot from 2025-02-20 13-04-57](https://github.com/user-attachments/assets/b52a9ad6-c614-4671-8720-ff3a70957343)
 ```bash
 ros2 run differential_drive_controller rpm_visualizer.py
 ```
@@ -141,16 +142,22 @@ You should see a Matplotlib window displaying the RPM data of both wheels dynami
 
 ---
 
-## 🤝 Contributing
-Feel free to submit pull requests, open issues, and suggest improvements!
+## 🔄 ROS2 Communication
+Run the following command to see the real-time RPM plot:
+![Screenshot from 2025-02-20 13-06-07](https://github.com/user-attachments/assets/cb8657f9-b01a-4b9d-aa67-1e9cf8cb1b8e)
+- `/cmd_vel` is the main velocity command input.
+- `wheel_rpm_calculator` subscribes to `/cmd_vel` and publishes `/left_wheel_rpm` and `/right_wheel_rpm`.
+- `rpm_subscriber` listens to these topics to visualize RPM data.
+- `robot_state_publisher` and `joint_state_publisher` manage robot state information.
+- `pid_controller` subscribes to `/odom` (from `nav_msgs::Odometry`) to implement feedback control.
+- The PID controller adjusts linear and angular velocity to follow the desired path.
+- `waypoint_navigator` sends velocity commands to `/cmd_vel` for sequential waypoint navigation.
+
+## 👨‍💻 Contributing
+Pull requests are welcome! 🎉 If you have ideas for improvements, feel free to fork and submit PRs.
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-## 📧 Contact
-For questions, reach out via GitHub Issues or email me at `your.email@example.com`. 🚀
-
+## 📞 Contact
+📧 Email: ybbhaskar19@gmail.com  
+🐙 GitHub: https://github.com/yashbhaskar
